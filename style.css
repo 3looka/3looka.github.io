@@ -620,6 +620,16 @@ ul { list-style: none; }
   color: #27ae60;
 }
 
+.project-status.done {
+  border-color: rgba(192, 57, 43, 0.4);
+  color: var(--red);
+}
+
+.project-status.wip {
+  border-color: rgba(243, 156, 18, 0.4);
+  color: #f39c12;
+}
+
 .project-name {
   font-size: 1.25rem;
   font-weight: 600;
@@ -686,20 +696,8 @@ ul { list-style: none; }
   color: var(--text);
 }
 
-.stack-bar {
-  height: 2px;
-  background: var(--border);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.stack-fill {
-  height: 100%;
-  width: 0%;
-  background: var(--red);
-  border-radius: 2px;
-  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
-}
+.stack-bar { display: none; }
+.stack-fill { display: none; }
 
 /* ============================================
    JOURNEY / TIMELINE
@@ -863,4 +861,14 @@ ul { list-style: none; }
   .identity-name { font-size: clamp(2.5rem, 12vw, 5rem); }
   .projects-grid { grid-template-columns: 1fr; }
   .stack-grid { grid-template-columns: repeat(2, 1fr); }
+}
+.contact-app {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.timeline-company {
+  font-weight: 400;
+  color: var(--red);
+  font-size: 0.9rem;
 }
