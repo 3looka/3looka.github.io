@@ -13,7 +13,6 @@ function initBackground() {
     buildGrid();
   }
 
-  // ── GRID ──────────────────────────────────────
   function buildGrid() {
     gridLines = [];
     const spacing = 60;
@@ -32,7 +31,6 @@ function initBackground() {
     });
   }
 
-  // ── PARTICLES ─────────────────────────────────
   function createParticle() {
     return {
       x:     Math.random() * W,
@@ -69,7 +67,6 @@ function initBackground() {
     });
   }
 
-  // ── DATA LINES ────────────────────────────────
   function createDataLine() {
     const vertical = Math.random() > 0.5;
     return {
@@ -131,7 +128,6 @@ function initBackground() {
     });
   }
 
-  // ── CORNER GLOW ───────────────────────────────
   function drawGlow() {
     const g = ctx.createRadialGradient(0, 0, 0, 0, 0, 400);
     g.addColorStop(0, 'rgba(192,57,43,0.04)');
@@ -140,7 +136,6 @@ function initBackground() {
     ctx.fillRect(0, 0, 400, 400);
   }
 
-  // ── LOOP ──────────────────────────────────────
   function loop() {
     ctx.clearRect(0, 0, W, H);
     drawGlow();
@@ -150,7 +145,6 @@ function initBackground() {
     animId = requestAnimationFrame(loop);
   }
 
-  // ── INIT ──────────────────────────────────────
   function init() {
     resize();
     initParticles();
@@ -168,4 +162,92 @@ function initBackground() {
   init();
 }
 
+function initTerminal() {
+  const body = document.getElementById('terminal-body');
+  if (!body) return;
+
+  const ASCII = [
+`__        __   _                          
+\\ \\      / /__| | ___ ___  _ __ ___   ___ 
+ \\ \\ /\\ / / _ \\ |/ __/ _ \\| '_ \` _ \\ / _ \\
+  \\ V  V /  __/ | (_| (_) | | | | | |  __/
+   \\_/\\_/ \\___|_|\\___\\___/|_| |_| |_|\\___|`,
+
+`█░█░█ █▀▀ █░░ █▀▀ █▀█ █▀▄▀█ █▀▀
+▀▄▀▄▀ ██▄ █▄▄ █▄▄ █▄█ █░▀░█ ██▄`,
+
+`| | | | ___| | ___ ___  _ __ ___   ___ 
+| | | |/ _ \\ |/ __/ _ \\| '_ \` _ \\ / _ \\
+| |_| |  __/ | (_| (_) | | | | | |  __/
+ \\___/ \\___|_|\\___\\___/|_| |_| |_|\\___|`
+  ];
+
+  const SEQUENCES = [
+    { type: 'cmd', text: 'ali@portfolio:~$ python welcome.py' },
+    { type: 'dim', text: '# Initializing welcome sequence...' },
+    { type: 'dim', text: '# Loading modules...' },
+    { type: 'dim', text: 'import sys, time, os' },
+    { type: 'dim', text: 'from display import ascii_art, render' },
+    { type: 'dim', text: '' },
+    { type: 'dim', text: 'def welcome():' },
+    { type: 'dim', text: '    fonts = load_fonts("JetBrains")' },
+    { type: 'dim', text: '    colors = theme.get("dark-premium")' },
+    { type: 'dim', text: '    art = ascii_art.generate("WELCOME")' },
+    { type: 'dim', text: '    render(art, color=colors["red"])' },
+    { type: 'dim', text: '' },
+    { type: 'dim', text: 'welcome()' },
+    { type: 'dim', text: '' },
+    { type: 'dim', text: '> Compiling...' },
+    { type: 'dim', text: '> Rendering output...' },
+    { type: 'dim', text: '' },
+    { type: 'out', text: '[ OUTPUT ]', ascii: 0 },
+  ];
+
+  let currentAscii = 0;
+  let lineIndex = 0;
+
+  function addLine(type, text) {
+    const el = document.createElement('div');
+    el.className = `terminal-line ${type}`;
+    el.textContent = text;
+    body.appendChild(el);
+    body.scrollTop = body.scrollHeight;
+  }
+
+  function addAscii(index) {
+    const el = document.createElement('div');
+    el.className = 'terminal-line ascii';
+    el.textContent = ASCII[index];
+    body.appendChild(el);
+    body.scrollTop = body.scrollHeight;
+  }
+
+  function typeSequence() {
+    if (lineIndex < SEQUENCES.length) {
+      const item = SEQUENCES[lineIndex];
+      addLine(item.type, item.text);
+      if (item.ascii !== undefined) {
+        setTimeout(() => {
+          addAscii(item.ascii);
+          body.scrollTop = body.scrollHeight;
+        }, 300);
+      }
+      lineIndex++;
+      const delay = item.type === 'dim' ? 120 : 300;
+      setTimeout(typeSequence, delay);
+    } else {
+      setTimeout(() => {
+        currentAscii = (currentAscii + 1) % ASCII.length;
+        body.innerHTML = '';
+        lineIndex = 0;
+        SEQUENCES[SEQUENCES.length - 1].ascii = currentAscii;
+        typeSequence();
+      }, 4000);
+    }
+  }
+
+  typeSequence();
+}
+
 document.addEventListener('DOMContentLoaded', initBackground);
+document.addEventListener('DOMContentLoaded', initTerminal);

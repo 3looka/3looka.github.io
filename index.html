@@ -61,30 +61,41 @@
     <!-- MODULE: IDENTITY -->
     <section id="identity" class="module">
       <div class="module-label">[ MODULE_01 :: IDENTITY ]</div>
-      <div class="identity-content">
-        <div class="identity-tag">Software Developer</div>
-        <h1 class="identity-name">
-          <span class="name-line">Ali</span>
-          <span class="name-line accent">Motasim</span>
-        </h1>
-        <p class="identity-bio typing-target" data-text="Building clean systems. Writing meaningful code. Crafting digital experiences that matter."></p>
-        <div class="identity-actions">
-          <a href="#projects" class="btn btn-primary magnetic">View Projects</a>
-          <a href="#contact"  class="btn btn-ghost magnetic">Get In Touch</a>
+      <div class="identity-wrapper">
+        <div class="identity-content">
+          <div class="identity-tag">Software Developer</div>
+          <h1 class="identity-name">
+            <span class="name-line">Ali</span>
+            <span class="name-line accent">Motasim</span>
+          </h1>
+          <p class="identity-bio typing-target" data-text="Building clean systems. Writing meaningful code. Crafting digital experiences that matter."></p>
+          <div class="identity-actions">
+            <a href="#projects" class="btn btn-primary magnetic">View Projects</a>
+            <a href="#contact"  class="btn btn-ghost magnetic">Get In Touch</a>
+          </div>
+          <div class="identity-stats">
+            <div class="stat-card">
+              <span class="stat-num" data-count="2">0</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num" data-count="3">0</span>
+              <span class="stat-label">Years Exp.</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-num" data-count="9">0</span>
+              <span class="stat-label">Tech Stack</span>
+            </div>
+          </div>
         </div>
-        <div class="identity-stats">
-          <div class="stat-card">
-            <span class="stat-num" data-count="2">0</span>
-            <span class="stat-label">Projects</span>
+        <div class="identity-terminal">
+          <div class="terminal-header">
+            <span class="card-dot red"></span>
+            <span class="card-dot yellow"></span>
+            <span class="card-dot green"></span>
+            <span class="terminal-title">ali@portfolio:~$</span>
           </div>
-          <div class="stat-card">
-            <span class="stat-num" data-count="3">0</span>
-            <span class="stat-label">Years Exp.</span>
-          </div>
-          <div class="stat-card">
-            <span class="stat-num" data-count="9">0</span>
-            <span class="stat-label">Tech Stack</span>
-          </div>
+          <div class="terminal-body" id="terminal-body"></div>
         </div>
       </div>
       <div class="scroll-hint">
@@ -142,9 +153,6 @@
       <h2 class="module-title"><span class="accent">Projects</span></h2>
       <p class="module-subtitle">Things I've built that I'm proud of.</p>
       <div class="projects-grid">
-
-       <div class="projects-grid">
-
         <div class="project-card glass-card magnetic">
           <div class="project-meta">
             <span class="project-num">01</span>
@@ -164,7 +172,6 @@
             <a href="https://github.com/akm323/server-log-analysis" class="project-link" target="_blank">GitHub →</a>
           </div>
         </div>
-
         <div class="project-card glass-card magnetic">
           <div class="project-meta">
             <span class="project-num">02</span>
@@ -181,7 +188,6 @@
             <a href="https://github.com/shegzibar/Irdc_dashboard_updated" class="project-link" target="_blank">GitHub →</a>
           </div>
         </div>
-
       </div>
     </section>
 
@@ -196,63 +202,54 @@
             <svg viewBox="0 0 32 32" width="28" height="28"><path fill="#F7DF1E" d="M2 2h28v28H2z"/><path fill="#000" d="M20.809 23.875a2.866 2.866 0 0 0 2.6 1.6c1.09 0 1.787-.545 1.787-1.3 0-.9-.716-1.222-1.916-1.747l-.658-.282c-1.9-.809-3.16-1.822-3.16-3.964 0-1.973 1.5-3.476 3.853-3.476a3.889 3.889 0 0 1 3.742 2.107l-2.048 1.315a1.789 1.789 0 0 0-1.694-1.13 1.146 1.146 0 0 0-1.259 1.13c0 .792.489 1.112 1.622 1.6l.658.282c2.236.959 3.5 1.938 3.5 4.138 0 2.371-1.861 3.657-4.359 3.657a5.05 5.05 0 0 1-4.795-2.691zm-9.295.228a2.317 2.317 0 0 0 2.07 1.237c.972 0 1.659-.487 1.659-2.368V15.01h2.589v8.005c0 3.906-2.287 5.684-5.626 5.684a5.227 5.227 0 0 1-4.998-3.075z"/></svg>
           </div>
           <div class="stack-name">JavaScript</div>
-          <div class="stack-bar"><div class="stack-fill" data-width="88"></div></div>
         </div>
         <div class="stack-card glass-card">
           <div class="stack-icon">
             <svg viewBox="0 0 32 32" width="28" height="28"><path fill="#E44D26" d="M5.902 27.201L3.655 2h24.69l-2.25 25.197L15.985 30z"/><path fill="#F16529" d="M16 27.858l8.17-2.265 1.922-21.532H16z"/><path fill="#EBEBEB" d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83.759 8.517H16zm0 8.027l-.014.004-3.442-.929-.22-2.465H9.221l.433 4.852 6.332 1.758.014-.004z"/><path fill="#fff" d="M15.989 13.407v3.091h3.806l-.358 4.009-3.448.93v3.216l6.337-1.755.046-.522.726-8.137.076-.832zm0-6.256v3.091h7.466l.062-.694.141-1.567.074-.83z"/></svg>
           </div>
           <div class="stack-name">HTML</div>
-          <div class="stack-bar"><div class="stack-fill" data-width="92"></div></div>
         </div>
         <div class="stack-card glass-card">
           <div class="stack-icon">
             <svg viewBox="0 0 32 32" width="28" height="28"><path fill="#1572B6" d="M5.902 27.201L3.655 2h24.69l-2.25 25.197L15.985 30z"/><path fill="#33A9DC" d="M16 27.858l8.17-2.265 1.922-21.532H16z"/><path fill="#fff" d="M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83.759 8.517H16zm0 8.027l-.014.004-3.442-.929-.22-2.465H9.221l.433 4.852 6.332 1.758.014-.004z"/><path fill="#EBEBEB" d="M15.989 13.407v3.091h3.806l-.358 4.009-3.448.93v3.216l6.337-1.755.046-.522.726-8.137.076-.832zm0-6.256v3.091h7.466l.062-.694.141-1.567.074-.83z"/></svg>
           </div>
           <div class="stack-name">CSS</div>
-          <div class="stack-bar"><div class="stack-fill" data-width="85"></div></div>
         </div>
         <div class="stack-card glass-card">
           <div class="stack-icon">
             <svg viewBox="0 0 32 32" width="28" height="28"><path fill="#3776AB" d="M15.885 2.1c-7.1 0-6.651 3.07-6.651 3.07v3.19h6.752v.95H6.545S2 8.8 2 16c0 7.2 3.999 6.9 3.999 6.9h2.388v-3.3s-.13-4 3.93-4h6.752s3.8.06 3.8-3.67V5.77S23.4 2.1 15.885 2.1zm-3.772 2.17a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4z"/><path fill="#FFD43B" d="M16.115 29.9c7.1 0 6.651-3.07 6.651-3.07v-3.19h-6.752v-.95h9.441S30 23.2 30 16c0-7.2-3.999-6.9-3.999-6.9h-2.388v3.3s.13 4-3.93 4h-6.752s-3.8-.06-3.8 3.67v6.16S8.6 29.9 16.115 29.9zm3.772-2.17a1.2 1.2 0 1 1 0-2.4 1.2 1.2 0 0 1 0 2.4z"/></svg>
           </div>
           <div class="stack-name">Python</div>
-          <div class="stack-bar"><div class="stack-fill" data-width="85"></div></div>
         </div>
         <div class="stack-card glass-card">
           <div class="stack-icon">
             <svg viewBox="0 0 32 32" width="28" height="28"><path fill="#000" d="M16 2a14 14 0 1 0 14 14A14 14 0 0 0 16 2zm-1.4 21.%-3H12V9h2.6zm0-16.2H12V4.6h2.6zM20 23h-2.6V14.4H20zm0-11.4h-2.6V4.6H20z"/><path fill="#fff" d="M14.6 23h-2.6V9h2.6zM14.6 6.8h-2.6V4.6h2.6zM20 23h-2.6V14.4H20zM20 11.6h-2.6V4.6H20z"/></svg>
           </div>
           <div class="stack-name">Flask</div>
-          <div class="stack-bar"><div class="stack-fill" data-width="78"></div></div>
         </div>
         <div class="stack-card glass-card">
           <div class="stack-icon">
             <svg viewBox="0 0 32 32" width="28" height="28"><path fill="#00B4AB" d="M4.105 4.105S2 6.45 2 9.9v12.2c0 3.45 2.105 5.795 2.105 5.795L15 16zm4.59.01S7 4.5 5.745 4.5H5.7L16 16l-10.255 11.5h.045C7 27.5 8.695 27.385 8.695 27.385L27.99 16.805c1.4-.81 1.405-2.11 1.405-2.11s0-1.3-1.405-2.11zm14.31 27.88S24.605 32 26.745 32H26.8l-11.3-11.5L27.99 9.195h-.045C26 9.195 24.3 9.31 24.3 9.31L5.01 19.89c-1.4.81-1.405 2.11-1.405 2.11s0 1.3 1.405 2.11z"/></svg>
           </div>
           <div class="stack-name">Dart</div>
-          <div class="stack-bar"><div class="stack-fill" data-width="75"></div></div>
         </div>
         <div class="stack-card glass-card">
           <div class="stack-icon">
             <svg viewBox="0 0 32 32" width="28" height="28"><path fill="#54C5F8" d="M12.948 3.426c-.607.0-1.247.203-1.855.61L3.016 9.281c-1.286.813-1.718 2.1-1.109 3.24l5.895 10.2a2.42 2.42 0 0 0 2.1 1.217h.203l-1.92 3.325a.826.826 0 0 0 .305 1.122.826.826 0 0 0 1.122-.305l2.328-4.041 2.328 4.041a.826.826 0 0 0 1.122.305.826.826 0 0 0 .305-1.122l-1.92-3.325h.203a2.42 2.42 0 0 0 2.1-1.217l5.895-10.2c.61-1.14.177-2.427-1.109-3.24L14.8 4.036c-.61-.407-1.245-.61-1.852-.61zm0 1.65c.355 0 .71.1 1.015.305l8.077 5.245c.71.457.914 1.14.61 1.718L16.755 22.54a.77.77 0 0 1-.66.38H9.905a.77.77 0 0 1-.66-.38L3.35 12.344c-.305-.58-.1-1.26.61-1.718l8.077-5.245c.305-.203.66-.305 1.015-.305h-.1z"/><path fill="#01579B" d="M12.948 5.076l-8.077 5.245c-.71.457-.914 1.14-.61 1.718L10.156 22.34h6.588l5.895-10.2c.305-.58.1-1.26-.61-1.718z"/></svg>
           </div>
           <div class="stack-name">Flutter</div>
-          <div class="stack-bar"><div class="stack-fill" data-width="80"></div></div>
         </div>
         <div class="stack-card glass-card">
           <div class="stack-icon">
             <svg viewBox="0 0 32 32" width="28" height="28"><path fill="#F05032" d="M31.414 14.586l-14-14a2 2 0 0 0-2.828 0l-2.172 2.172 2.758 2.758a2.5 2.5 0 0 1 3.168 3.182l2.656 2.656a2.5 2.5 0 1 1-1.497 1.398l-2.478-2.478V22.5a2.5 2.5 0 1 1-2.053-.049V10.22a2.5 2.5 0 0 1-1.357-3.277L11.172 4.414l-10.586 10.6a2 2 0 0 0 0 2.828l14 14a2 2 0 0 0 2.828 0l14-14a2 2 0 0 0 0-2.828z"/></svg>
           </div>
           <div class="stack-name">Git</div>
-          <div class="stack-bar"><div class="stack-fill" data-width="95"></div></div>
         </div>
         <div class="stack-card glass-card">
           <div class="stack-icon">
             <svg viewBox="0 0 32 32" width="28" height="28"><circle cx="16" cy="16" r="2.5" fill="#61DAFB"/><path fill="none" stroke="#61DAFB" stroke-width="1.2" d="M16 11.2c4.8 0 9.2.8 12 2.4 2.4 1.4 3.2 3 3.2 4.4 0 1.4-.8 3-3.2 4.4-2.8 1.6-7.2 2.4-12 2.4s-9.2-.8-12-2.4C1.6 21 .8 19.4.8 18c0-1.4.8-3 3.2-4.4 2.8-1.6 7.2-2.4 12-2.4z"/><path fill="none" stroke="#61DAFB" stroke-width="1.2" d="M11.4 13.6c2.4-4.2 5.2-7.4 7.8-9.2 2-1.4 3.8-1.8 5-.8 1.2 1 1.4 2.8.8 5.2-.8 2.8-2.8 6.4-5.2 9.6-2.4 3.2-5 5.8-7.4 7.4-2 1.4-3.8 1.8-5 .8-1.2-1-1.4-2.8-.8-5.2.8-2.8 2.8-6.4 4.8-7.8z"/><path fill="none" stroke="#61DAFB" stroke-width="1.2" d="M11.4 22.4c-2.4-4.2-4-8.4-4.2-12 0-2.4.6-4 1.8-4.8 1.2-.8 3 0 5 1.6 2.4 1.8 4.8 5 6.8 8.4 2 3.4 3.4 7 3.8 10 .4 2.4-.2 4.2-1.4 5-1.2.8-3 0-5-1.6-2.4-1.8-4.6-4.4-6.8-6.6z"/></svg>
           </div>
           <div class="stack-name">React Native</div>
-          <div class="stack-bar"><div class="stack-fill" data-width="78"></div></div>
         </div>
       </div>
     </section>
@@ -262,13 +259,13 @@
       <div class="module-label">[ MODULE_05 :: JOURNEY ]</div>
       <h2 class="module-title">My <span class="accent">Journey</span></h2>
       <p class="module-subtitle">The path that got me here.</p>
-     <div class="timeline">
+      <div class="timeline">
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content glass-card">
             <span class="timeline-year">May 2023 — Present</span>
-           <h3 class="timeline-title">Software Developer</h3>
-<span class="timeline-company">Freelance</span>
+            <h3 class="timeline-title">Software Developer</h3>
+            <span class="timeline-company">Freelance</span>
             <p class="timeline-desc">Delivering customized web and mobile applications for clients across different industries. Responsibilities included understanding client requirements, designing intuitive user interfaces, and writing clean, maintainable code. Sharpened skills in Flutter, Python, and web technologies, while reinforcing secure coding practices and version control with Git.</p>
           </div>
         </div>
@@ -276,8 +273,8 @@
           <div class="timeline-dot"></div>
           <div class="timeline-content glass-card">
             <span class="timeline-year">Jan 2023 — Apr 2023</span>
-<h3 class="timeline-title">Network Engineer</h3>
-<span class="timeline-company">Albugaa Computer & Telecommunications · Internship</span>
+            <h3 class="timeline-title">Network Engineer</h3>
+            <span class="timeline-company">Albugaa Computer & Telecommunications · Internship</span>
             <p class="timeline-desc">Worked with Windows Server and Linux environments to support and maintain network infrastructure. Tasks included managing and configuring virtual machines, deploying and monitoring systems like Grafana, and contributing to server and network service setup. Built a solid foundation in system administration, monitoring tools, and network operations.</p>
           </div>
         </div>
@@ -286,7 +283,7 @@
           <div class="timeline-content glass-card">
             <span class="timeline-year">Dec 2021 — Dec 2022</span>
             <h3 class="timeline-title">Software Developer</h3>
-<span class="timeline-company">IRDC at Future University · Internship</span>
+            <span class="timeline-company">IRDC at Future University · Internship</span>
             <p class="timeline-desc">Focused on building mobile applications using Flutter. Responsibilities included designing, coding, and testing applications to ensure they met user requirements and delivered a smooth experience. Contributed to projects within the research center and collaborated effectively with a multidisciplinary team.</p>
           </div>
         </div>

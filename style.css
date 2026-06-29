@@ -1067,3 +1067,110 @@ ul { list-style: none; }
   overflow: hidden;
   text-overflow: ellipsis;
 }
+/* ============================================
+   IDENTITY WRAPPER & RAIN CARD
+   ============================================ */
+.identity-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  width: 100%;
+}
+
+.identity-content {
+  flex: 1;
+}
+
+.identity-terminal {
+  flex: 0 0 480px;
+  height: 540px;
+  border: 1px solid var(--border-red);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(8,8,8,0.95);
+  display: flex;
+  flex-direction: column;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255,255,255,0.02);
+  flex-shrink: 0;
+}
+
+.terminal-title {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  margin-left: 0.5rem;
+}
+
+.terminal-body {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  line-height: 1.7;
+  color: #aaa;
+  overflow: hidden;
+  white-space: pre;
+}
+
+.terminal-line { color: #aaa; }
+.terminal-line.cmd { color: #27ae60; }
+.terminal-line.out { color: var(--red); }
+.terminal-line.dim { color: var(--text-muted); }
+.terminal-line.ascii {
+  color: var(--red);
+  font-size: 0.6rem;
+  line-height: 1.4;
+  white-space: pre;
+}
+
+@media (max-width: 768px) {
+  .identity-terminal {
+    flex: none;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    z-index: 0;
+    opacity: 0.15;
+  }
+
+  .identity-content {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .identity-wrapper {
+    flex-direction: column;
+    gap: 0;
+    position: relative;
+  }
+
+  .identity-rain-card {
+    position: absolute;
+    inset: 0;
+    flex: none;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    z-index: 0;
+    opacity: 0.18;
+  }
+
+  .identity-content {
+    position: relative;
+    z-index: 1;
+  }
+}
