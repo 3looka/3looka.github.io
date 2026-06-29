@@ -1057,7 +1057,13 @@ ul { list-style: none; }
   color: var(--text);
 }
 .timeline-company {
+  display: block;
   font-weight: 400;
   color: var(--red);
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
