@@ -856,21 +856,184 @@ ul { list-style: none; }
   /* GENERAL */
   .module {
     padding: 7rem 1.25rem 4rem;
-    align-items: center;
-    text-align: center;
   }
 
   .module-label {
     text-align: center;
   }
 
-  .module-title {
+  /* NAVBAR */
+  .navbar {
+    top: auto;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.6rem 1rem;
+    gap: 0.5rem;
+    width: 95vw;
+    justify-content: center;
+  }
+
+  .navbar.visible {
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .nav-brand { display: none; }
+  .nav-status { display: none; }
+
+  .nav-links {
+    gap: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .nav-link {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.6rem;
+  }
+
+  /* STATUS BAR */
+  .status-bar {
+    font-size: 0.55rem;
+    padding: 0.3rem 1rem;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* IDENTITY */
+  #identity {
+    padding-top: 8rem;
+    align-items: center;
     text-align: center;
   }
 
-  .module-subtitle {
+  .identity-tag { text-align: center; }
+
+  .identity-name {
+    font-size: clamp(2.8rem, 14vw, 5rem);
+    align-items: center;
     text-align: center;
   }
+
+  .identity-bio {
+    text-align: center;
+    margin: 0 auto 2rem;
+  }
+
+  .identity-actions { justify-content: center; }
+  .identity-stats   { justify-content: center; }
+  .scroll-hint      { display: none; }
+
+  /* BOOT */
+  .boot-logo {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* ABOUT */
+  .module-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .module-title { text-align: center; }
+  .module-subtitle { text-align: center; }
+
+  .module-desc {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .about-tags { justify-content: flex-start; }
+
+  /* CODE CARD — stays left aligned */
+  .about-card {
+    text-align: left;
+  }
+
+  .code-block {
+    font-size: 0.72rem;
+    text-align: left;
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    text-align: left;
+  }
+
+  .project-name { text-align: center; }
+
+  .project-desc,
+  .project-tags,
+  .project-links {
+    text-align: left;
+  }
+
+  /* STACK */
+  .stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stack-card {
+    align-items: center;
+    text-align: center;
+  }
+
+  /* TIMELINE */
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-title {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .timeline-desc {
+    text-align: left;
+  }
+
+  .timeline-company {
+    display: block;
+    margin-top: 0.2rem;
+  }
+
+  .timeline-content {
+    text-align: left;
+  }
+
+  /* CONTACT */
+  .contact-wrap {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-item {
+    justify-content: flex-start;
+  }
+
+  /* FOOTER */
+  .footer {
+    flex-direction: column;
+    gap: 0.4rem;
+    padding-bottom: 6rem;
+    text-align: center;
+  }
+
+  .footer-sep { display: none; }
+
 
   /* NAVBAR */
   .navbar {
