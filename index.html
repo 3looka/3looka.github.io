@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali Motasim — Software Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- BOOT SCREEN -->
+  <div id="boot-screen">
+    <div class="boot-content">
+      <div class="boot-logo">AM<span class="cursor-blink">_</span></div>
+      <div class="boot-lines" id="boot-lines"></div>
+      <div class="boot-bar-wrap">
+        <div class="boot-bar" id="boot-bar"></div>
+      </div>
+      <div class="boot-status" id="boot-status">INITIALIZING...</div>
+    </div>
+  </div>
+
+  <!-- BACKGROUND CANVAS -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- SYSTEM STATUS BAR -->
+  <div class="status-bar" id="status-bar">
+    <span class="status-dot"></span>
+    <span>CORE STATUS: <span class="status-online">ONLINE</span></span>
+    <span class="status-sep">|</span>
+    <span>v1.0.0</span>
+    <span class="status-sep">|</span>
+    <span>MODULES: <span class="status-online">6</span> LOADED</span>
+    <span class="status-sep">|</span>
+    <span id="status-time"></span>
+  </div>
+
+  <!-- FLOATING NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-brand">AM<span class="nav-dot">.</span></div>
+    <ul class="nav-links">
+      <li><a href="#identity" class="nav-link active" data-section="identity">Identity</a></li>
+      <li><a href="#about"    class="nav-link" data-section="about">About</a></li>
+      <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+      <li><a href="#stack"    class="nav-link" data-section="stack">Stack</a></li>
+      <li><a href="#journey"  class="nav-link" data-section="journey">Journey</a></li>
+      <li><a href="#contact"  class="nav-link" data-section="contact">Contact</a></li>
+    </ul>
+    <div class="nav-status">
+      <span class="pulse-dot"></span>
+      <span>ONLINE</span>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- MODULE: IDENTITY -->
+    <section id="identity" class="module">
+      <div class="module-label">[ MODULE_01 :: IDENTITY ]</div>
+      <div class="identity-content">
+        <div class="identity-tag">Software Developer</div>
+        <h1 class="identity-name">
+          <span class="name-line">Ali</span>
+          <span class="name-line accent">Motasim</span>
+        </h1>
+        <p class="identity-bio typing-target" data-text="Building clean systems. Writing meaningful code. Crafting digital experiences that matter."></p>
+        <div class="identity-actions">
+          <a href="#projects" class="btn btn-primary magnetic">View Projects</a>
+          <a href="#contact"  class="btn btn-ghost magnetic">Get In Touch</a>
+        </div>
+        <div class="identity-stats">
+          <div class="stat-card">
+            <span class="stat-num" data-count="12">0</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-count="3">0</span>
+            <span class="stat-label">Years Exp.</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-num" data-count="8">0</span>
+            <span class="stat-label">Tech Stack</span>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <span>SCROLL</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- MODULE: ABOUT -->
+    <section id="about" class="module reveal">
+      <div class="module-label">[ MODULE_02 :: ABOUT ]</div>
+      <div class="module-grid">
+        <div class="about-text">
+          <h2 class="module-title">About <span class="accent">Me</span></h2>
+          <p class="module-desc">
+            I'm Ali Motasim, a Software Developer passionate about building
+            robust, scalable, and elegant software. I focus on clean
+            architecture and writing code that's easy to read, maintain, and extend.
+          </p>
+          <p class="module-desc">
+            When I'm not coding, I'm exploring new technologies, contributing
+            to open-source, and pushing the limits of what's possible with modern software.
+          </p>
+          <div class="about-tags">
+            <span class="tag">Clean Code</span>
+            <span class="tag">Problem Solver</span>
+            <span class="tag">Fast Learner</span>
+            <span class="tag">Team Player</span>
+          </div>
+        </div>
+        <div class="about-card glass-card">
+          <div class="card-header">
+            <span class="card-dot red"></span>
+            <span class="card-dot yellow"></span>
+            <span class="card-dot green"></span>
+            <span class="card-title">ali.config.json</span>
+          </div>
+          <pre class="code-block"><span class="c-key">"name"</span>: <span class="c-str">"Ali Motasim"</span>,
+<span class="c-key">"role"</span>: <span class="c-str">"Software Developer"</span>,
+<span class="c-key">"location"</span>: <span class="c-str">"Sudan"</span>,
+<span class="c-key">"available"</span>: <span class="c-bool">true</span>,
+<span class="c-key">"focus"</span>: [
+  <span class="c-str">"Backend"</span>,
+  <span class="c-str">"Frontend"</span>,
+  <span class="c-str">"System Design"</span>
+],
+<span class="c-key">"coffee"</span>: <span class="c-str">"required"</span></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE: PROJECTS -->
+    <section id="projects" class="module reveal">
+      <div class="module-label">[ MODULE_03 :: PROJECTS ]</div>
+      <h2 class="module-title">Selected <span class="accent">Projects</span></h2>
+      <p class="module-subtitle">Things I've built that I'm proud of.</p>
+      <div class="projects-grid">
+
+        <div class="project-card glass-card magnetic">
+          <div class="project-meta">
+            <span class="project-num">01</span>
+            <span class="project-status online">LIVE</span>
+          </div>
+          <h3 class="project-name">Project Alpha</h3>
+          <p class="project-desc">A full-stack web application built with modern technologies. Features real-time updates and a clean, intuitive UI.</p>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">MongoDB</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">GitHub →</a>
+            <a href="#" class="project-link accent-link">Live →</a>
+          </div>
+        </div>
+
+        <div class="project-card glass-card magnetic">
+          <div class="project-meta">
+            <span class="project-num">02</span>
+            <span class="project-status">WIP</span>
+          </div>
+          <h3 class="project-name">Project Beta</h3>
+          <p class="project-desc">A CLI tool for developers that automates repetitive tasks and boosts productivity in day-to-day development workflow.</p>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">CLI</span>
+            <span class="tag">Automation</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">GitHub →</a>
+          </div>
+        </div>
+
+        <div class="project-card glass-card magnetic">
+          <div class="project-meta">
+            <span class="project-num">03</span>
+            <span class="project-status online">LIVE</span>
+          </div>
+          <h3 class="project-name">Project Gamma</h3>
+          <p class="project-desc">A REST API service with authentication, rate limiting, and comprehensive documentation. Built for scale.</p>
+          <div class="project-tags">
+            <span class="tag">Django</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Docker</span>
+          </div>
+          <div class="project-links">
+            <a href="#" class="project-link">GitHub →</a>
+            <a href="#" class="project-link accent-link">Docs →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MODULE: TECH STACK -->
+    <section id="stack" class="module reveal">
+      <div class="module-label">[ MODULE_04 :: TECH_STACK ]</div>
+      <h2 class="module-title">Tech <span class="accent">Stack</span></h2>
+      <p class="module-subtitle">Tools and technologies I work with.</p>
+      <div class="stack-grid">
+        <div class="stack-card glass-card">
+          <div class="stack-icon">{ }</div>
+          <div class="stack-name">JavaScript</div>
+          <div class="stack-bar"><div class="stack-fill" data-width="90"></div></div>
+        </div>
+        <div class="stack-card glass-card">
+          <div class="stack-icon">&lt;/&gt;</div>
+          <div class="stack-name">Python</div>
+          <div class="stack-bar"><div class="stack-fill" data-width="85"></div></div>
+        </div>
+        <div class="stack-card glass-card">
+          <div class="stack-icon">&#9883;</div>
+          <div class="stack-name">React</div>
+          <div class="stack-bar"><div class="stack-fill" data-width="80"></div></div>
+        </div>
+        <div class="stack-card glass-card">
+          <div class="stack-icon">&#9650;</div>
+          <div class="stack-name">Node.js</div>
+          <div class="stack-bar"><div class="stack-fill" data-width="78"></div></div>
+        </div>
+        <div class="stack-card glass-card">
+          <div class="stack-icon">DB</div>
+          <div class="stack-name">PostgreSQL</div>
+          <div class="stack-bar"><div class="stack-fill" data-width="75"></div></div>
+        </div>
+        <div class="stack-card glass-card">
+          <div class="stack-icon">[]</div>
+          <div class="stack-name">Docker</div>
+          <div class="stack-bar"><div class="stack-fill" data-width="70"></div></div>
+        </div>
+        <div class="stack-card glass-card">
+          <div class="stack-icon">DJ</div>
+          <div class="stack-name">Django</div>
+          <div class="stack-bar"><div class="stack-fill" data-width="82"></div></div>
+        </div>
+        <div class="stack-card glass-card">
+          <div class="stack-icon">GIT</div>
+          <div class="stack-name">Git</div>
+          <div class="stack-bar"><div class="stack-fill" data-width="95"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE: JOURNEY -->
+    <section id="journey" class="module reveal">
+      <div class="module-label">[ MODULE_05 :: JOURNEY ]</div>
+      <h2 class="module-title">My <span class="accent">Journey</span></h2>
+      <p class="module-subtitle">The path that got me here.</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-year">2024</span>
+            <h3 class="timeline-title">Software Developer</h3>
+            <p class="timeline-desc">Building full-stack applications and contributing to production systems. Focused on clean architecture and performance.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-year">2023</span>
+            <h3 class="timeline-title">First Open Source Contribution</h3>
+            <p class="timeline-desc">Contributed to open source projects. Learned the value of collaboration, code review, and writing for others.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-year">2022</span>
+            <h3 class="timeline-title">Started the Journey</h3>
+            <p class="timeline-desc">Wrote my first line of code. Fell in love with problem-solving and building things from scratch.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODULE: CONTACT -->
+    <section id="contact" class="module reveal">
+      <div class="module-label">[ MODULE_06 :: CONTACT ]</div>
+      <h2 class="module-title">Get In <span class="accent">Touch</span></h2>
+      <p class="module-subtitle">Have a project in mind? Let's talk.</p>
+      <div class="contact-wrap">
+        <div class="contact-card glass-card">
+          <div class="contact-links">
+            <a href="mailto:ali@example.com" class="contact-item magnetic">
+              <span class="contact-icon">✉</span>
+              <span>ali@example.com</span>
+            </a>
+            <a href="https://github.com/3looka" class="contact-item magnetic" target="_blank">
+              <span class="contact-icon">&#9675;</span>
+              <span>github.com/3looka</span>
+            </a>
+            <a href="#" class="contact-item magnetic">
+              <span class="contact-icon">in</span>
+              <span>LinkedIn</span>
+            </a>
+          </div>
+          <div class="contact-availability">
+            <span class="pulse-dot"></span>
+            <span>Available for new opportunities</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <span>Ali Motasim</span>
+    <span class="footer-sep">|</span>
+    <span>Built with precision</span>
+    <span class="footer-sep">|</span>
+    <span id="footer-year"></span>
+  </footer>
+
+  <script src="boot.js"></script>
+  <script src="background.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
